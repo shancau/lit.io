@@ -1,0 +1,10 @@
+}
+
+/*
+    background-image: url("https://e7.pngegg.com/pngimages/200/386/png-clipart-compact-disc-good-kid-m-a-a-d-city-section-80-album-cover-kendrick-lamar-album-label.png");
+*/
+
+   /* Vinyl Section */
+   .vinyl-container {
+    flex: 1;
+    display: flex;

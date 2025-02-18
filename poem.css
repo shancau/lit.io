@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Vinyl Styles */
+.vinyl {
+    display: flex;
+    width: 400px;
+    height: 400px;
+    background-image: url('https://e7.pngegg.com/pngimages/200/386/png-clipart-compact-disc-good-kid-m-a-a-d-city-section-80-album-cover-kendrick-lamar-album-label.png');
+    background-size: cover;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s;
+    box-shadow: 0 0 30px rgba(255,255,255,0.1);
+    animation: spin 20s linear infinite;
+    animation-play-state: paused;
+}
+
+.vinyl::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Tracklist Styles */
+.tracklist {
+    display: none;
+    width: 50vw;
+    padding: 2rem;
+    background: transparent;
+    right: -50vw;
+    transition: right 0.5s ease-in-out;
+    opacity: 0;
+    height: 80vh;
+    overflow-y: auto;
+}
+
+.vinyl:hover + .tracklist,
+.tracklist:hover {
+    display: flex;
+    right: 20px;
+    opacity: 1;
+}
+
+.track {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #333;
+}
+
+.track-title {
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s;
+    background: #252525;
+    border-radius: 4px;
+    margin-bottom: 2vh;
+}
+
+.track-title:hover {
+    background: #333;
+}
+
+.track-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 1rem;
+    line-height: 1.6;
+    color: #ccc;
+}
+
+.track.active .track-content {
+    max-height: 500px;
+    padding: 1rem;
+}
+
+h1 {
+    margin-bottom: 1.5rem;
+    color: #fff;
+}

@@ -1,0 +1,48 @@
+/* General Styling */
+body {
+    font-family: 'Georgia', serif; /* Use a serif font for academic feel */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: #0a0a0a;
+    color: #fff;
+}
+
+.vinyl {
+    width: 200px;
+    height: 200px;
+    background: url('vinyl.png') no-repeat center center;
+    background-size: cover;
+    margin: 20px auto;
+}
+
+.tracklist {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.track-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.track-content {
+    font-size: 1rem;
+    color: #ccc;
+}
+
+/* Citation Styling */
+.citation {
+    text-indent: -1.5em; /* Create hanging indent */
+    padding-left: 1.5em; /* Add space for the hanging indent */
+    margin-bottom: 1em; /* Space between citations */
+    line-height: 1.6; /* Improve readability */
+}
+
+.citation::first-line {
+    font-weight: bold; /* Optional: Highlight the first line of each citation */
+}
